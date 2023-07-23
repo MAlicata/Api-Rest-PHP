@@ -8,10 +8,14 @@
 <body>
     <?php
     include_once('herencia/class/class-alumno.php');
+    include_once('class/class-maestro.php');
+
     $alumno = new Alumno('Matias','Alicata', 28, 'Masculino', 'Ing en Sistemas', '20232023', 70);
+    $maestro = new Maestro('Pedro','Chan', 40, 'Masculino', 'Ing en Sistemas', '20232023', 10, 10000, "matutino");
 
     //echo $alumno->getNombre();
     //$alumno->cancelarClase();
+    $maestro->matricular();
     $alumno->matricular();
     $alumno->aprobar();
     $alumno->reprobar();
